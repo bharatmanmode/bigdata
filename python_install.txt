@@ -1,0 +1,49 @@
+python 3.4
+
+
+yum install cyrus-sasl-devel
+yum install gcc-c++
+yum install gcc
+yum -y install libgcc.x86_64 libgcc.i686
+yum -y install gcc-c++.x86_64
+yum -y install gcc-4.8.5-11.el7.x86_64
+
+
+==========
+cd /tmp
+
+wget https://www.python.org/ftp/python/3.4.5/Python-3.4.5.tgz
+tar xvf Python-3.4.5.tgz
+cd Python-3.4.5
+cd /tmp/Python-3.4.5
+./configure
+make altinstall
+
+pip3.4 install hdfs
+pip3.4 install pandas
+pip3.4 install impyla
+pip3.4 install XlsxWriter
+pip3.4 install xlrd
+
+pip3.4 list
+
+===========
+
+pip3.4 install --upgrade pip
+
+/etc/pip.conf
+
+[root@pc1ubofahad01 ~]# cat /etc/pip.conf
+[list]
+format=columns
+
+======
+pip3.4 install hdfs==2.0.16
+pip3.4 install impyla==0.14.0
+pip3.4 install pandas==0.20.3
+pip3.4 install XlsxWriter==0.9.8
+pip3.4 install xlrd==1.0.0
+pip3.4 install wheel==0.29.0
+pip3.4 install JayDeBeApi==1.1.1
+pip3.4 install sasl==0.2.1
+pip3.4 install thrift-sasl==0.2.1
